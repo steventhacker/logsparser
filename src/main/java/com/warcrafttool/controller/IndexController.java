@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.client.RestTemplate;
 
 @Controller
 public class IndexController
@@ -25,7 +24,4 @@ public class IndexController
 
 	@Autowired
 	private static final XLogger LOGGER = XLoggerFactory.getXLogger(IndexController.class);
-
-	@Autowired
-	private RestTemplate restTemplate;
 }
