@@ -1,1 +1,37 @@
-this is the index
+<html>
+<head>
+    <title>Warcraft Logs Parser</title>
+    <link rel="stylesheet" type="text/css" href="/css/third-party/unsemantic/unsemantic-grid-responsive-tablet.css">
+    <link rel="stylesheet" type="text/css" href="/css/third-party/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/third-party/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+<div class="content-container">
+    <h3 class="center-text">Warcraft Logs Parser</h3>
+    <form action="/reports" method="post">
+        <div class="grid-100 grid-parent">
+            <div class="form-item">
+                <div class="grid-40 right-text">Server:</div>
+                <div class="grid-60"><input type="text" name="server-name" size="25" value="twisting-nether" /></div>
+            </div>
+            <div class="form-item">
+                <div class="grid-40 right-text">Guild:</div>
+                <div class="grid-60"><input type="text" name="guild-name" size="25" value="Bear Cavalry" /></div>
+            </div>
+            <div class="form-item">
+                <div class="grid-40 right-text">Region:</div>
+                <div class="grid-60"><input type="text" name="region-name" size="25" value="US" /></div>
+            </div>
+            <div class="form-item">
+                <div class="grid-40 right-text">Key:</div>
+                <div class="grid-60"><input type="text" name="key-name" size="25" /></div>
+            </div>
+            <div class="form-item grid-100 center-text">
+                <input type="submit" value="Get Logs" />
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

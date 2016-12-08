@@ -1,6 +1,7 @@
 package com.warcrafttool.config;
 
 import com.github.jknack.handlebars.springmvc.HandlebarsViewResolver;
+import com.warcrafttool.helpers.HandlebarsHelpers;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -21,6 +22,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".hbs");
 		resolver.setCache(false);
+		resolver.registerHelpers(new HandlebarsHelpers());
 		return resolver;
 	}
 
