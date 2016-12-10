@@ -1,14 +1,16 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Phase model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Phase
 {
-
 	private Long boss;
 	private List<String> phases = new ArrayList<String>();
 

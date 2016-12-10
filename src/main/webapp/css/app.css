@@ -3,6 +3,7 @@
     margin: auto;
     width: 50%;
     padding: 10px;
+    font-size: 14px;
 }
 
 .center-text {
@@ -11,6 +12,10 @@
 
 .right-text {
     text-align: right;
+}
+
+.title {
+    font-size: 2em;
 }
 
 .form-item {

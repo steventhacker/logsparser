@@ -1,8 +1,11 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * Table target
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class TableTarget
 {
 	private String name;

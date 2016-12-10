@@ -8,7 +8,7 @@ import java.util.Locale;
  */
 public class HandlebarsHelpers
 {
-	public String numberFormat(String number)
+	public static String numberFormat(Long number)
 	{
 		NumberFormat numberFormat = NumberFormat.getNumberInstance(Locale.US);
 		return numberFormat.format(number);

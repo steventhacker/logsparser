@@ -1,14 +1,16 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * FriendlyPet model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FriendlyPet
 {
-
 	private String name;
 	private Long id;
 	private Long guid;

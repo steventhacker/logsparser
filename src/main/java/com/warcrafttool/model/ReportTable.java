@@ -1,15 +1,18 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 /**
  * ReportTable model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ReportTable
 {
 	private String reportTitle;
 	private List<ReportTableEntry> entries;
-	private Long totalHealing = 0L;
+	private Long totalAmount = 0L;
 	private Long totalTime;
 
 	public String getReportTitle()
@@ -32,19 +35,19 @@ public class ReportTable
 		this.entries = entries;
 	}
 
-	public Long getTotalHealing()
+	public Long getTotalAmount()
 	{
-		return totalHealing;
+		return totalAmount;
 	}
 
-	public void setTotalHealing(Long totalHealing)
+	public void setTotalAmount(Long totalAmount)
 	{
-		this.totalHealing = totalHealing;
+		this.totalAmount = totalAmount;
 	}
 
-	public void addToTotalHealing(Long amount)
+	public void addToTotal(Long amount)
 	{
-		this.totalHealing += amount;
+		this.totalAmount += amount;
 	}
 
 	public Long getTotalTime()

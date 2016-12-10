@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>Warcraft Logs Parser</title>
+    <link rel="stylesheet" type="text/css" href="/css/third-party/unsemantic/unsemantic-grid-responsive-tablet.css">
+    <link rel="stylesheet" type="text/css" href="/css/third-party/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/third-party/bootstrap/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/app.css">
+</head>
+<body>
+<div class="content-container">
+    <h3 class="center-text">Warcraft Logs Parser</h3>
+    <div class="report-details">
+        <form action="/table" method="post">
+            <input type="hidden" name="report" value="{{report}}" />
+            <div class="boss-list">
+                <div class="title">Bosses fought:</div>
+                {{#each bosses}}
+                    <div class="boss-item">
+                        <div> {{name}}</div>
+                    </div>
+                {{/each}}
+            </div>
+            <div class="friendly-list">
+                <div class="title">Participant list:</div>
+                {{#each friendlies}}
+                    <div class="friendly-item">
+                        <input type="radio" name="sourceId" value="{{id}}"> {{name}}
+                    </div>
+                {{/each}}
+            </div>
+            <div class="type-selector">
+                <select name="type">
+                    <option value="damage-done">Damage done</option>
+                    <option value="damage-taken">Damage taken</option>
+                    <option value="healing">Healing</option>
+                </select>
+            </div>
+            <input type="submit" value="Get Report" />
+        </form>
+    </div>
+</div>
+</body>
+</html>

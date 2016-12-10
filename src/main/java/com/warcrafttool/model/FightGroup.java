@@ -1,14 +1,16 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * FightGroup model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class FightGroup
 {
-
 	private List<Fight> fights = new ArrayList<Fight>();
 	private String lang;
 	private List<Friendly> friendlies = new ArrayList<Friendly>();

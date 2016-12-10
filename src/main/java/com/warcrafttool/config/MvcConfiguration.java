@@ -22,7 +22,7 @@ public class MvcConfiguration extends WebMvcConfigurerAdapter
 		resolver.setPrefix("/WEB-INF/views/");
 		resolver.setSuffix(".hbs");
 		resolver.setCache(false);
-		resolver.registerHelpers(new HandlebarsHelpers());
+		resolver.registerHelpers(HandlebarsHelpers.class);
 		return resolver;
 	}
 

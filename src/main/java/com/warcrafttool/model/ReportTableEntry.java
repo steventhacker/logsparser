@@ -1,10 +1,13 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.List;
 
 /**
  * Entry in report table
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class ReportTableEntry
 {
 	private String name;

@@ -1,13 +1,14 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.google.gson.annotations.SerializedName;
 
 /**
  * Fight model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Fight
 {
-
 	private Long id;
 	@SerializedName("start_time")
 	private Long startTime;

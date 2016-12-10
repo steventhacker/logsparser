@@ -9,13 +9,18 @@
 <body>
 <div class="content-container">
     <h3 class="center-text">Warcraft Logs Parser</h3>
-    <div class="report-list">
-        {{#each reports}}
-            <div class="report-list-item">
-                <a href="/report?report={{this.id}}">{{this.title}}</a>
+    <div class="report-table">
+        <div class="title">Report: {{type}}</div>
+    </div>
+    <div class="report-total">Total {{type}} for report: {{numberFormat table.totalAmount}}</div>
+    {{#with table}}
+        {{#each entries}}
+            <div class="table-item">
+                <span class="table-item-label">{{name}}</span>
+                <span class="table-item-value">{{total}}</span>
             </div>
         {{/each}}
-    </div>
+    {{/with}}
 </div>
 </body>
 </html>

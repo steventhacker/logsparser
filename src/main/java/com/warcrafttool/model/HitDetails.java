@@ -1,8 +1,11 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 /**
  * HitDetails Model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class HitDetails
 {
 	private String type;

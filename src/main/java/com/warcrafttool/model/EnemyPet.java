@@ -1,11 +1,14 @@
 package com.warcrafttool.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * EnemyPet model
  */
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class EnemyPet
 {
 	private String name;
